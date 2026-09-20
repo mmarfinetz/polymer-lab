@@ -1,0 +1,3 @@
+RadonPy warning: Total energy does not converge. mean = 45167.089491, sma_sd = 84.000290
+RadonPy warning: Potential energy of dihedrals does not converge. mean = 6546.254437, sma_sd = 33.724159
+RadonPy warning: Potential energy of vdW interactions does not converge. mean = -15443.118000, sma_sd = 38.959190

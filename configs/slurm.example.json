@@ -1,0 +1,14 @@
+{
+  "workdir": "/shared/polymer-lab/jobs",
+  "partition": "cpu",
+  "account": null,
+  "qos": null,
+  "time_limit": "48:00:00",
+  "ntasks": 16,
+  "cpus_per_task": 1,
+  "memory": "64G",
+  "memory_per_cpu": null,
+  "python_executable": "/shared/envs/polymer-lab-radonpy/bin/python",
+  "remote_host": "login.cluster.example.edu",
+  "environment_setup": "source /shared/miniforge3/etc/profile.d/conda.sh && conda activate polymer-lab-radonpy"
+}

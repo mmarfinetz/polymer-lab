@@ -1,0 +1,12 @@
+{
+  "dependency": "afterok",
+  "gate_slurm_job_id": "7850563",
+  "production_scope": {
+    "candidate": "uhmwpe-gel-draw-100-doe-001",
+    "draw_ratio": 2,
+    "mpi_ranks": 16,
+    "profile": "production"
+  },
+  "promotion_slurm_job_id": "7850972",
+  "schema_version": 1
+}

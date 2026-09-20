@@ -1,0 +1,21 @@
+log log.lammps
+read_restart restart.rst
+kspace_style pppm 1e-6
+dielectric 1.0
+special_bonds amber
+pair_modify mix arithmetic
+neighbor 2.0 bin
+
+timestep 1.0
+neigh_modify delay 0 every 1 check yes
+fix shake_benchmark all shake 1e-4 1000 0 m 1.0
+fix md_benchmark all nvt temp 300.0 300.0 100.0
+
+thermo_style custom step time temp press density etotal
+thermo_modify flush yes
+thermo 1000
+run 3000
+
+unfix md_benchmark
+unfix shake_benchmark
+quit

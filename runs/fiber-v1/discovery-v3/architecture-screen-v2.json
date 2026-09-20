@@ -1,0 +1,20 @@
+{
+  "admissible_as_candidate_measurement": false,
+  "candidate_id": "fiber-9ee296fee9e08765",
+  "decision": "do_not_prioritize_75_25_bundle_for_fiber_v1_target",
+  "geometric_area_fraction": 0.7573964497041421,
+  "high_draw_global_break_strain_upper_scenario": 0.035354836816950286,
+  "interpretation": "Under the cited constituent scenario even a rectangular stress envelope cannot reach 100 MJ/m3. Matching bundle tests could overturn the scenario.",
+  "maximum_outer_filament_path_factor": 1.0051988706960682,
+  "peak_bundle_stress_upper_scenario_gpa": 2.037396449704142,
+  "reference_scenario": {
+    "high_draw_break_strain": 0.03,
+    "high_draw_strength_gpa": 3.5,
+    "lower_draw_assumed_survival_strain": 0.15,
+    "lower_draw_strength_gpa": 0.26,
+    "source": "https://doi.org/10.1021/acsomega.3c09230"
+  },
+  "status": "conditional_screening_rejection",
+  "target_toughness_mj_m3": 100,
+  "work_to_15_percent_strain_upper_scenario_mj_m3": 77.6758885828124
+}

@@ -1,0 +1,64 @@
+[
+  {
+    "stage": "thermophysical",
+    "backend": "RadonPy/Psi4/LAMMPS for compatible synthetic chemistries",
+    "properties": [
+      "density",
+      "tg"
+    ],
+    "admission_rule": "Converged MD is screening evidence only; protein systems require a protein-specific backend.",
+    "implemented": true
+  },
+  {
+    "stage": "aligned_chain",
+    "backend": "LAMMPS aligned-chain protocol",
+    "properties": [
+      "axial_modulus",
+      "yield_stress_proxy",
+      "chain_orientation",
+      "chain_slip"
+    ],
+    "admission_rule": "Protocol-validation runs are diagnostic only. Production evidence requires temperature, strain-completion, fit-quality, identity, software-version, and artifact-checksum gates.",
+    "implemented": true
+  },
+  {
+    "stage": "fracture",
+    "backend": "validated reactive-potential fracture protocol",
+    "properties": [
+      "tensile_strength",
+      "strain_at_failure",
+      "toughness"
+    ],
+    "admission_rule": "Require an applicable validated potential, replicated trajectories, and uncertainty.",
+    "implemented": false
+  },
+  {
+    "stage": "bundle",
+    "backend": "mesoscale filament/bundle model",
+    "properties": [
+      "fatigue_life",
+      "knot_efficiency",
+      "filament_diameter",
+      "bundle_diameter"
+    ],
+    "admission_rule": "Require explicit filament count, twist, defects, interfaces, and anchor/knot geometry.",
+    "implemented": false
+  },
+  {
+    "stage": "experimental",
+    "backend": "spinning plus tensile/environmental test program",
+    "properties": [
+      "tensile_strength",
+      "strain_at_failure",
+      "toughness",
+      "density",
+      "fatigue_life",
+      "knot_efficiency",
+      "filament_diameter",
+      "bundle_diameter",
+      "environmental_stability"
+    ],
+    "admission_rule": "Only matching-design experimental evidence can qualify fiber-v1.",
+    "implemented": false
+  }
+]

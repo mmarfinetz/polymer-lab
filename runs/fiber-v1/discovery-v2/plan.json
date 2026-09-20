@@ -1,0 +1,402 @@
+{
+  "schema_version": 1,
+  "name": "fiber-v1-discovery-v2",
+  "plan_id": "fiber-discovery-5fd17cc6d6f0f1bc",
+  "parent_campaign_id": "fiber-v1-60ef13628652c42a",
+  "candidates": [
+    {
+      "id": "fiber-9ee296fee9e08765",
+      "name": "uhmwpe-bimodal-draw-bundle-doe-001",
+      "design_hash": "9ee296fee9e0876568ef422c63c59006a9e23aafe666f2954a375b8c16257ed2",
+      "chemistry": {
+        "constituents": [
+          {
+            "name": "high-draw UHMWPE",
+            "material_family": "uhmwpe",
+            "role": "load_bearing_core",
+            "mass_fraction": 0.75,
+            "representation": "[*]CC[*]",
+            "representation_type": "psmiles",
+            "evidence_basis": "exact polyethylene repeat; population draw ratio is a DOE input"
+          },
+          {
+            "name": "lower-draw UHMWPE bridge",
+            "material_family": "uhmwpe",
+            "role": "soft_segment",
+            "mass_fraction": 0.25,
+            "representation": "[*]CC[*]",
+            "representation_type": "psmiles",
+            "evidence_basis": "exact polyethylene repeat; population draw ratio is a DOE input"
+          }
+        ],
+        "number_average_molecular_weight_g_mol": 1500000.0,
+        "weight_average_molecular_weight_g_mol": 3000000.0,
+        "hard_segment_fraction": null,
+        "soft_segment_fraction": null
+      },
+      "process": {
+        "spinning_method": "hybrid_assembly",
+        "dope_concentration_mass_fraction": null,
+        "solvent_or_buffer": "population-specific spinning followed by dry bundle assembly",
+        "coagulation_or_trigger": "population-specific solidification before interphase application",
+        "spinning_temperature_c": null,
+        "draw_ratio": null,
+        "crystallinity_fraction": null,
+        "filament_diameter_um": 20.0,
+        "filament_count": 3200,
+        "twist_turns_per_m": 25.0,
+        "bundle_diameter_mm": 1.3,
+        "core_mass_fraction": 1.0,
+        "sheath_mass_fraction": 0.0,
+        "anneal_temperature_c": 148.0,
+        "anneal_under_tension": true,
+        "unresolved_parameters": [
+          "population_load_sharing",
+          "post_peak_bridge_retention"
+        ]
+      },
+      "architecture": {
+        "topology": "bimodal_parallel_bundle",
+        "populations": [
+          {
+            "name": "strength population",
+            "constituent_name": "high-draw UHMWPE",
+            "role": "primary_load_bearing",
+            "mass_fraction": 0.75,
+            "draw_ratio": 100.0,
+            "filament_count": 2400,
+            "filament_diameter_um": 20.0,
+            "lay_angle_deg": 0.0
+          },
+          {
+            "name": "ductile bridge population",
+            "constituent_name": "lower-draw UHMWPE bridge",
+            "role": "ductile_bridge",
+            "mass_fraction": 0.25,
+            "draw_ratio": 10.0,
+            "filament_count": 800,
+            "filament_diameter_um": 20.0,
+            "lay_angle_deg": 0.0
+          }
+        ],
+        "assembly_description": "Separately draw two UHMWPE filament populations, combine them in parallel, then apply low bundle twist and tension annealing."
+      },
+      "generation": 1,
+      "parent_ids": [
+        "fiber-2ce891491668e51e"
+      ],
+      "status": "hypothesis",
+      "hypothesis_basis": "Search strength and terminal strain independently using high- and lower-draw populations of the same low-density recyclable chemistry.",
+      "assumptions": [
+        "The 75/25 population split and draw ratios are DOE inputs, not optimized values.",
+        "Constituent literature behavior is not evidence for the assembled bundle.",
+        "A matching bundle tensile curve is required to determine strength, terminal strain, and toughness."
+      ],
+      "source_references": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10955568/",
+        "https://doi.org/10.1016/j.polymer.2024.127564"
+      ],
+      "created_at": "2026-09-01T16:11:17.482232Z"
+    },
+    {
+      "id": "fiber-6c5f9e97611f88cf",
+      "name": "uhmwpe-bimodal-spu-interphase-doe-001",
+      "design_hash": "6c5f9e97611f88cf72ddf618a8dd46a2adcac880c2bee93d03b52cb6134a4dc6",
+      "chemistry": {
+        "constituents": [
+          {
+            "name": "high-draw UHMWPE",
+            "material_family": "uhmwpe",
+            "role": "load_bearing_core",
+            "mass_fraction": 0.75,
+            "representation": "[*]CC[*]",
+            "representation_type": "psmiles",
+            "evidence_basis": "exact polyethylene repeat; population draw ratio is a DOE input"
+          },
+          {
+            "name": "lower-draw UHMWPE bridge",
+            "material_family": "uhmwpe",
+            "role": "soft_segment",
+            "mass_fraction": 0.15,
+            "representation": "[*]CC[*]",
+            "representation_type": "psmiles",
+            "evidence_basis": "exact polyethylene repeat; population draw ratio is a DOE input"
+          },
+          {
+            "name": "SPU-HA supramolecular polyurethane interphase",
+            "material_family": "segmented_polyurethane_urea",
+            "role": "interphase",
+            "mass_fraction": 0.1,
+            "representation": "PTMEG2000:HMDI:ADH:BDA=5.0:10.0:2.5:2.5 mmol",
+            "representation_type": "material_family",
+            "evidence_basis": "published constituent stoichiometry; copolymer sequence and compatibility with the fiber coating process remain unresolved"
+          }
+        ],
+        "number_average_molecular_weight_g_mol": 1500000.0,
+        "weight_average_molecular_weight_g_mol": 3000000.0,
+        "hard_segment_fraction": null,
+        "soft_segment_fraction": null
+      },
+      "process": {
+        "spinning_method": "hybrid_assembly",
+        "dope_concentration_mass_fraction": null,
+        "solvent_or_buffer": "population-specific spinning followed by dry bundle assembly",
+        "coagulation_or_trigger": "population-specific solidification before interphase application",
+        "spinning_temperature_c": null,
+        "draw_ratio": null,
+        "crystallinity_fraction": null,
+        "filament_diameter_um": 20.0,
+        "filament_count": 2880,
+        "twist_turns_per_m": 25.0,
+        "bundle_diameter_mm": 1.3,
+        "core_mass_fraction": 0.9,
+        "sheath_mass_fraction": 0.1,
+        "anneal_temperature_c": 80.0,
+        "anneal_under_tension": true,
+        "unresolved_parameters": [
+          "interphase_coating_method",
+          "uhmwpe_interfacial_adhesion",
+          "population_load_sharing",
+          "post_coating_solvent_removal"
+        ]
+      },
+      "architecture": {
+        "topology": "multiphase_interphase_bundle",
+        "populations": [
+          {
+            "name": "strength population",
+            "constituent_name": "high-draw UHMWPE",
+            "role": "primary_load_bearing",
+            "mass_fraction": 0.75,
+            "draw_ratio": 100.0,
+            "filament_count": 2400,
+            "filament_diameter_um": 20.0,
+            "lay_angle_deg": 0.0
+          },
+          {
+            "name": "ductile bridge population",
+            "constituent_name": "lower-draw UHMWPE bridge",
+            "role": "ductile_bridge",
+            "mass_fraction": 0.15,
+            "draw_ratio": 10.0,
+            "filament_count": 480,
+            "filament_diameter_um": 20.0,
+            "lay_angle_deg": 0.0
+          },
+          {
+            "name": "continuous dissipative interphase",
+            "constituent_name": "SPU-HA supramolecular polyurethane interphase",
+            "role": "dissipative_interphase",
+            "mass_fraction": 0.1,
+            "draw_ratio": null,
+            "filament_count": null,
+            "filament_diameter_um": null,
+            "lay_angle_deg": 0.0
+          }
+        ],
+        "assembly_description": "Coat a parallel bimodal UHMWPE bundle with a continuous SPU-HA interphase, remove solvent, then tension-condition below the UHMWPE melting range."
+      },
+      "generation": 1,
+      "parent_ids": [
+        "fiber-2ce891491668e51e"
+      ],
+      "status": "hypothesis",
+      "hypothesis_basis": "Retain a high-draw UHMWPE strength skeleton while a lower-draw population and reversible hydrogen-bonded interphase dissipate energy and protect contacts.",
+      "assumptions": [
+        "The 75/15/10 mass split is a DOE input and has no candidate-specific property evidence.",
+        "Published SPU-HA film properties cannot be transferred to a thin fiber interphase without testing.",
+        "Plasma or primer treatment may be required to bond the interphase to inert UHMWPE surfaces."
+      ],
+      "source_references": [
+        "https://doi.org/10.1038/s41467-025-62449-8",
+        "https://doi.org/10.1016/j.compscitech.2020.108112",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10955568/"
+      ],
+      "created_at": "2026-09-01T16:11:17.482461Z"
+    },
+    {
+      "id": "fiber-a32a1719856d3b3a",
+      "name": "uhmwpe-pbo-spu-hybrid-bundle-doe-001",
+      "design_hash": "a32a1719856d3b3a286e4380e61f7753e4efd832012d50972544f6e0c4d8f80e",
+      "chemistry": {
+        "constituents": [
+          {
+            "name": "high-draw UHMWPE",
+            "material_family": "uhmwpe",
+            "role": "load_bearing_core",
+            "mass_fraction": 0.6,
+            "representation": "[*]CC[*]",
+            "representation_type": "psmiles",
+            "evidence_basis": "exact polyethylene repeat; population draw ratio is a DOE input"
+          },
+          {
+            "name": "lower-draw UHMWPE bridge",
+            "material_family": "uhmwpe",
+            "role": "soft_segment",
+            "mass_fraction": 0.15,
+            "representation": "[*]CC[*]",
+            "representation_type": "psmiles",
+            "evidence_basis": "exact polyethylene repeat; population draw ratio is a DOE input"
+          },
+          {
+            "name": "poly(p-phenylene benzobisoxazole)",
+            "material_family": "pbo",
+            "role": "load_bearing_core",
+            "mass_fraction": 0.15,
+            "representation": "[*]C2=NC1=CC(N=C(C4=CC=C([*])C=C4)O3)=C3C=C1O2",
+            "representation_type": "psmiles",
+            "evidence_basis": "explicit PBO repeat chemistry; draw ratio is a DOE input"
+          },
+          {
+            "name": "SPU-HA supramolecular polyurethane interphase",
+            "material_family": "segmented_polyurethane_urea",
+            "role": "interphase",
+            "mass_fraction": 0.1,
+            "representation": "PTMEG2000:HMDI:ADH:BDA=5.0:10.0:2.5:2.5 mmol",
+            "representation_type": "material_family",
+            "evidence_basis": "published constituent stoichiometry; copolymer sequence and compatibility with the fiber coating process remain unresolved"
+          }
+        ],
+        "number_average_molecular_weight_g_mol": null,
+        "weight_average_molecular_weight_g_mol": null,
+        "hard_segment_fraction": null,
+        "soft_segment_fraction": null
+      },
+      "process": {
+        "spinning_method": "hybrid_assembly",
+        "dope_concentration_mass_fraction": null,
+        "solvent_or_buffer": "population-specific spinning followed by dry bundle assembly",
+        "coagulation_or_trigger": "population-specific solidification before interphase application",
+        "spinning_temperature_c": null,
+        "draw_ratio": null,
+        "crystallinity_fraction": null,
+        "filament_diameter_um": 20.0,
+        "filament_count": 2880,
+        "twist_turns_per_m": 25.0,
+        "bundle_diameter_mm": 1.3,
+        "core_mass_fraction": 0.9,
+        "sheath_mass_fraction": 0.1,
+        "anneal_temperature_c": 80.0,
+        "anneal_under_tension": true,
+        "unresolved_parameters": [
+          "interphase_coating_method",
+          "mixed_fiber_interfacial_adhesion",
+          "population_load_sharing",
+          "pbo_uv_protection",
+          "post_coating_solvent_removal"
+        ]
+      },
+      "architecture": {
+        "topology": "multiphase_interphase_bundle",
+        "populations": [
+          {
+            "name": "UHMWPE strength population",
+            "constituent_name": "high-draw UHMWPE",
+            "role": "primary_load_bearing",
+            "mass_fraction": 0.6,
+            "draw_ratio": 100.0,
+            "filament_count": 1920,
+            "filament_diameter_um": 20.0,
+            "lay_angle_deg": 0.0
+          },
+          {
+            "name": "UHMWPE ductile bridge population",
+            "constituent_name": "lower-draw UHMWPE bridge",
+            "role": "ductile_bridge",
+            "mass_fraction": 0.15,
+            "draw_ratio": 10.0,
+            "filament_count": 480,
+            "filament_diameter_um": 20.0,
+            "lay_angle_deg": 0.0
+          },
+          {
+            "name": "PBO reinforcement population",
+            "constituent_name": "poly(p-phenylene benzobisoxazole)",
+            "role": "rigid_reinforcement",
+            "mass_fraction": 0.15,
+            "draw_ratio": 10.0,
+            "filament_count": 480,
+            "filament_diameter_um": 20.0,
+            "lay_angle_deg": 0.0
+          },
+          {
+            "name": "continuous dissipative interphase",
+            "constituent_name": "SPU-HA supramolecular polyurethane interphase",
+            "role": "dissipative_interphase",
+            "mass_fraction": 0.1,
+            "draw_ratio": null,
+            "filament_count": null,
+            "filament_diameter_um": null,
+            "lay_angle_deg": 0.0
+          }
+        ],
+        "assembly_description": "Assemble separately spun UHMWPE and PBO populations in parallel, apply a continuous SPU-HA interphase, remove solvent, and tension-condition the bundle."
+      },
+      "generation": 1,
+      "parent_ids": [
+        "fiber-2ce891491668e51e"
+      ],
+      "status": "hypothesis",
+      "hypothesis_basis": "Use a minority rigid-rod population to preserve peak load while UHMWPE controls density and the bridge/interphase populations provide post-peak energy dissipation.",
+      "assumptions": [
+        "The 60/15/15/10 mass split is a DOE input, not a mixture-property prediction.",
+        "PBO constituent strength and density do not establish hybrid performance.",
+        "The whole design requires mesoscale load-transfer modeling and matching experiments."
+      ],
+      "source_references": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6571651/",
+        "https://doi.org/10.1038/s41467-025-62449-8",
+        "https://doi.org/10.1016/j.compscitech.2020.108112"
+      ],
+      "created_at": "2026-09-01T16:11:17.482575Z"
+    }
+  ],
+  "priority_order": [
+    "fiber-9ee296fee9e08765",
+    "fiber-6c5f9e97611f88cf",
+    "fiber-a32a1719856d3b3a"
+  ],
+  "stages": [
+    {
+      "name": "component_reference_validation",
+      "purpose": "Validate each physics backend against published component-level curves.",
+      "backend": "PE crystal AIREBO-M; chemistry-specific PBO; SPU fragment DFT and polymer MD",
+      "gate": "No architecture job until its component backend reproduces reference mechanisms.",
+      "can_emit_candidate_measurements": false,
+      "implemented": false
+    },
+    {
+      "name": "restartable_component_pilots",
+      "purpose": "Run short replicated cells and reject force-field, packing, or convergence failures early.",
+      "backend": "Betty Slurm checkpointed pilots with three independent defect/seed realizations",
+      "gate": "All required components converge; failed pilots emit diagnostics and no measurements.",
+      "can_emit_candidate_measurements": false,
+      "implemented": false
+    },
+    {
+      "name": "architecture_load_transfer",
+      "purpose": "Resolve population load sharing, slip, sequential failure, and interphase pullout.",
+      "backend": "Mesoscale multifilament stress-transfer model calibrated only from admitted component data",
+      "gate": "Predicted envelopes may prioritize prototypes but are never admitted as measurements.",
+      "can_emit_candidate_measurements": false,
+      "implemented": false
+    },
+    {
+      "name": "matching_design_experiments",
+      "purpose": "Spin, assemble, and test the exact architecture under the fiber-v1 conditions.",
+      "backend": "Replicated tensile, density, fatigue, knot, creep, humidity, and temperature tests",
+      "gate": "Only matching-design experiments can qualify a candidate against the full target.",
+      "can_emit_candidate_measurements": true,
+      "implemented": false
+    }
+  ],
+  "compute_policy": [
+    "Do not use amorphous RadonPy convergence as the sole gate for a semicrystalline fiber.",
+    "Use crystalline PE cells for axial response and the amorphous cell only for tie-chain/interphase diagnostics.",
+    "Run three restartable pilots before any production trajectory.",
+    "Stop at the first failed identity, force-field, convergence, density, or orientation gate.",
+    "Never convert constituent literature values, mixture estimates, or surrogate outputs into candidate measurements."
+  ],
+  "scientific_status": "Architecture hypotheses and staged gates only; no candidate-specific properties are predicted, measured, admitted, or qualified.",
+  "created_at": "2026-09-01T16:11:17.482629Z"
+}

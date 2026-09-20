@@ -1,0 +1,10 @@
+{
+  "version": "pe-airebo-m-reference-v2",
+  "purpose": "backend reference gate before Fiber v1 finite-chain compute",
+  "replicate_seeds": [104729, 130363, 155921, 177013],
+  "acceptance": {"require_all_replicates_pass": true, "maximum_modulus_cv": 0.1, "minimum_modulus_fit_r2": 0.98},
+  "protocol_hash_is_generated_from": "PEReferenceProtocol(version=pe-airebo-m-reference-v2)",
+  "predeclared_before_execution": true,
+  "admissible_as_candidate_measurement": false,
+  "scientific_observations_emitted": false
+}

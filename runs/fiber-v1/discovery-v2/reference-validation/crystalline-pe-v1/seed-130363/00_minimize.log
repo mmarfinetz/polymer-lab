@@ -1,0 +1,86 @@
+LAMMPS (22 Jul 2025 - Update 5)
+  using 1 OpenMP thread(s) per MPI task
+clear
+  using 1 OpenMP thread(s) per MPI task
+units metal
+atom_style atomic
+boundary p p p
+read_data /vast/projects/jcombar1/betty-testing/mitchmar/polymer-lab/runs/fiber-v1/discovery-v2/reference-validation/crystalline-pe-v1/seed-130363/pe-crystal.data
+Reading data file ...
+  orthogonal box = (0 0 0) to (29.668 29.634 30.6)
+  2 by 2 by 2 MPI processor grid
+  reading atoms ...
+  3456 atoms
+  read_data CPU = 1.022 seconds
+newton on
+pair_style airebo/morse 3.0
+pair_coeff * * /vast/projects/jcombar1/betty-testing/mitchmar/polymer-lab/vendor/lammps-reference/9e42b6f0f2c68a092d5847d4127a053dc50e126a/CH.airebo-m C H
+Reading airebo/morse potential file /vast/projects/jcombar1/betty-testing/mitchmar/polymer-lab/vendor/lammps-reference/9e42b6f0f2c68a092d5847d4127a053dc50e126a/CH.airebo-m with DATE: 2016-03-15
+neighbor 2.0 bin
+neigh_modify delay 0 every 1 check yes
+timestep 0.0002
+thermo 100
+thermo_style custom step atoms temp press density lx ly lz pe etotal
+min_style fire
+minimize 1.0e-8 1.0e-10 20000 200000
+Neighbor list info ...
+  update: every = 1 steps, delay = 0 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 12.2
+  ghost atom cutoff = 12.2
+  binsize = 6.1, bins = 5 5 6
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair airebo/morse, perpetual
+      attributes: full, newton on, ghost
+      pair build: full/bin/ghost
+      stencil: full/ghost/bin/3d
+      bin: standard
+  Parameters for fire:
+    dmax  delaystep dtgrow dtshrink alpha0 alphashrink tmax tmin   integrator   halfstepback   abcfire  
+     0.1     20      1.1     0.5     0.25     0.99      10  0.02 eulerimplicit      yes          no     
+Per MPI rank memory allocation (min/avg/max) = 6.575 | 6.575 | 6.575 Mbytes
+   Step        Atoms         Temp          Press         Density           Lx             Ly             Lz           PotEng         TotEng    
+         0        3456   0              10192.275      0.99739311     29.668         29.634         30.6          -14757.627     -14757.627    
+       100        3456   0.045610948   -7979.3823      0.99739311     29.668         29.634         30.6          -14773.882     -14773.862    
+       158        3456   0.0059252012  -8007.6466      0.99739311     29.668         29.634         30.6          -14773.951     -14773.949    
+Loop time of 1.01436 on 8 procs for 158 steps with 3456 atoms
+
+99.8% CPU use with 8 MPI tasks x 1 OpenMP threads
+
+Minimization stats:
+  Stopping criterion = energy tolerance
+  Energy initial, next-to-last, final = 
+     -14757.6270832785  -14773.9512124631  -14773.9513470628
+  Force two-norm initial, final = 29.575059 0.041743189
+  Force max component initial, final = 0.68437021 0.0009208512
+  Final line search alpha, max atom move = 0 0
+  Iterations, force evaluations = 158 160
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.86725    | 0.9193     | 0.96566    |   3.7 | 90.63
+Neigh   | 0          | 0          | 0          |   0.0 |  0.00
+Comm    | 0.034556   | 0.081017   | 0.13306    |  12.3 |  7.99
+Output  | 0.00011328 | 0.00011605 | 0.0001283  |   0.0 |  0.01
+Modify  | 0          | 0          | 0          |   0.0 |  0.00
+Other   |            | 0.01393    |            |       |  1.37
+
+Nlocal:            432 ave         432 max         432 min
+Histogram: 8 0 0 0 0 0 0 0 0 0
+Nghost:           7600 ave        7600 max        7600 min
+Histogram: 8 0 0 0 0 0 0 0 0 0
+Neighs:              0 ave           0 max           0 min
+Histogram: 8 0 0 0 0 0 0 0 0 0
+FullNghs:       419328 ave      419328 max      419328 min
+Histogram: 8 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 3354624
+Ave neighs/atom = 970.66667
+Neighbor list builds = 0
+Dangerous builds = 0
+write_restart /vast/projects/jcombar1/betty-testing/mitchmar/polymer-lab/runs/fiber-v1/discovery-v2/reference-validation/crystalline-pe-v1/seed-130363/00_minimized.restart
+System init for write_restart ...
+write_data /vast/projects/jcombar1/betty-testing/mitchmar/polymer-lab/runs/fiber-v1/discovery-v2/reference-validation/crystalline-pe-v1/seed-130363/00_minimized.data
+System init for write_data ...
+Total wall time: 0:00:02

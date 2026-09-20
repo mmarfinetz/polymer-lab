@@ -1,0 +1,150 @@
+{
+  "job": {
+    "approval_rationale": "User explicitly requested and approved running fiber-v1 aligned-chain compute on Betty on 2026-08-25.",
+    "approved_by": "mitchmar",
+    "artifact_uri": "file:///vast/projects/jcombar1/betty-testing/mitchmar/polymer-lab/runs/fiber-v1/aligned/uhmwpe-gel-draw-100-doe-001/protocol-validation-draw-2",
+    "campaign_id": "fiber-v1-60ef13628652c42a",
+    "candidate": {
+      "assumptions": [
+        "The 0.85 crystallinity fraction is a DOE target requiring measurement.",
+        "The 25 turns/m bundle twist is an initial bundle variable, not an optimized value.",
+        "Atomistic cells use finite chains and draw ratios 2/4/6; they cannot reproduce the full 1.5 M g/mol chain or draw 100."
+      ],
+      "chemistry": {
+        "constituents": [
+          {
+            "evidence_basis": "exact repeat chemistry; molecular-weight values are DOE setpoints",
+            "mass_fraction": 1.0,
+            "material_family": "uhmwpe",
+            "name": "linear UHMWPE",
+            "representation": "[*]CC[*]",
+            "representation_type": "psmiles",
+            "role": "load_bearing_core"
+          }
+        ],
+        "hard_segment_fraction": null,
+        "number_average_molecular_weight_g_mol": 1500000.0,
+        "soft_segment_fraction": null,
+        "weight_average_molecular_weight_g_mol": 3000000.0
+      },
+      "created_at": "2026-08-25T16:59:34.268868Z",
+      "design_hash": "2ce891491668e51e906e8fee06489144cb9fd6082ec9468d5b9f2f52e6c26d40",
+      "generation": 0,
+      "hypothesis_basis": "First concrete fiber-v1 DOE point. Chemistry and process settings are design inputs, not measured output.",
+      "id": "fiber-2ce891491668e51e",
+      "name": "uhmwpe-gel-draw-100-doe-001",
+      "parent_ids": [],
+      "process": {
+        "anneal_temperature_c": 148.0,
+        "anneal_under_tension": true,
+        "bundle_diameter_mm": 1.3,
+        "coagulation_or_trigger": "ambient-air quench, n-hexane extraction, vacuum dry",
+        "core_mass_fraction": 1.0,
+        "crystallinity_fraction": 0.85,
+        "dope_concentration_mass_fraction": 0.05,
+        "draw_ratio": 100.0,
+        "filament_count": 3200,
+        "filament_diameter_um": 20.0,
+        "sheath_mass_fraction": 0.0,
+        "solvent_or_buffer": "paraffin oil",
+        "spinning_method": "gel_spin",
+        "spinning_temperature_c": 170.0,
+        "twist_turns_per_m": 25.0,
+        "unresolved_parameters": []
+      },
+      "source_references": [
+        "https://doi.org/10.1007/BF00955487",
+        "https://doi.org/10.1002/polb.20682",
+        "https://research.rug.nl/en/publications/mechanical-properties-of-ultra-high-molecular-weight-polyethylene"
+      ],
+      "status": "hypothesis"
+    },
+    "created_at": "2026-08-25T17:15:51.564963Z",
+    "estimated_core_hours": 192.0,
+    "id": "9ea2f307-a837-401b-9448-95229d491b3f",
+    "preparation_job": {
+      "artifact_uri": "file:///vast/projects/jcombar1/betty-testing/mitchmar/polymer-lab/runs/fiber-v1/aligned/uhmwpe-gel-draw-100-doe-001/protocol-validation-draw-2/preparation",
+      "campaign_id": "fiber-v1-60ef13628652c42a",
+      "candidate": {
+        "architecture": "linear_homopolymer",
+        "canonical_psmiles": "*CC*",
+        "created_at": "2026-08-25T17:15:51.553856Z",
+        "generation": 0,
+        "generation_method": "fiber-v1-reviewed-doe",
+        "id": "29991c61-8eff-4a55-a697-ed3fd1ef52d2",
+        "metadata": {
+          "fiber_candidate_id": "fiber-2ce891491668e51e",
+          "fiber_design_hash": "2ce891491668e51e906e8fee06489144cb9fd6082ec9468d5b9f2f52e6c26d40",
+          "scientific_status": "candidate definition only; not a property measurement",
+          "validator": "rdkit"
+        },
+        "parent_ids": [],
+        "psmiles": "[*]CC[*]",
+        "structure_hash": "c29b63eba2106da5e84f3b5b30b7d46acbb51aa2074b901136b7cd0fa1128ca4"
+      },
+      "created_at": "2026-08-25T17:15:51.564894Z",
+      "estimated_core_hours": 192.0,
+      "external_id": null,
+      "id": "8c568e85-d49a-49a7-8d4d-c24fea1c2943",
+      "requested_properties": [],
+      "retry_count": 0,
+      "spec": {
+        "chain_count": 4,
+        "charge_method": "RESP",
+        "extra": {
+          "mpi": 4,
+          "no_trajectory": false,
+          "omp": 1,
+          "psi4_memory_mb": 5000,
+          "psi4_omp": 1,
+          "retry_equilibration": 2
+        },
+        "force_field": "GAFF2_mod",
+        "initial_density_g_cm3": 0.05,
+        "lammps_version": "stable",
+        "pressure_atm": 1.0,
+        "profile": "production",
+        "psi4_version": "environment",
+        "radonpy_version": "1.0b2",
+        "random_seed": 11,
+        "rdkit_version": "environment",
+        "tacticity": "atactic",
+        "target_atoms_per_chain": 200,
+        "temperature_k": 300.0,
+        "tg_cooling_rate_k_per_ns": 8000.0
+      },
+      "state": "approved"
+    },
+    "protocol": {
+      "barostat_damping_fs": 1000.0,
+      "constrain_hydrogen_bonds": true,
+      "constraint_iterations": 1000,
+      "constraint_tolerance": 0.0001,
+      "draw_axis": "z",
+      "draw_ratio": 2.0,
+      "draw_true_strain_rate_s": 5000000000.0,
+      "maximum_mean_transverse_pressure_deviation_atm": 250.0,
+      "maximum_temperature_deviation_fraction": 0.1,
+      "minimum_modulus_fit_r2": 0.9,
+      "minimum_orientation_gain": 0.05,
+      "minimum_tensile_samples": 20,
+      "mpi_ranks": 4,
+      "profile": "protocol_validation",
+      "random_seed": 11,
+      "relaxation_steps": 50000,
+      "restart_every_steps": 25000,
+      "sample_every_steps": 500,
+      "temperature_k": 300.0,
+      "tensile_max_true_strain": 0.05,
+      "tensile_true_strain_rate_s": 5000000000.0,
+      "thermostat_damping_fs": 100.0,
+      "timestep_fs": 1.0,
+      "transverse_pressure_atm": 1.0,
+      "version": "aligned-chain-v1"
+    },
+    "schema_version": 1,
+    "state": "approved"
+  },
+  "manifest_hash": "f89a3bed7695671ef49713457cf8f1d859d9dc385fcd945e05041cf750c7dd31",
+  "schema_version": 1
+}

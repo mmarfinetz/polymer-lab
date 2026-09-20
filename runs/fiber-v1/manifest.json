@@ -1,0 +1,432 @@
+{
+  "schema_version": 1,
+  "name": "fiber-v1",
+  "campaign_id": "fiber-v1-60ef13628652c42a",
+  "state": "screening",
+  "target": {
+    "tensile_strength": {
+      "minimum": 2.0,
+      "maximum": null,
+      "minimum_inclusive": true,
+      "maximum_inclusive": true,
+      "unit": "GPa"
+    },
+    "tensile_strength_stretch_goal_gpa": 4.0,
+    "strain_at_failure": {
+      "minimum": 15.0,
+      "maximum": 40.0,
+      "minimum_inclusive": true,
+      "maximum_inclusive": true,
+      "unit": "%"
+    },
+    "toughness": {
+      "minimum": 100.0,
+      "maximum": null,
+      "minimum_inclusive": false,
+      "maximum_inclusive": true,
+      "unit": "MJ/m^3"
+    },
+    "density": {
+      "minimum": null,
+      "maximum": 1.3,
+      "minimum_inclusive": true,
+      "maximum_inclusive": false,
+      "unit": "g/cm^3"
+    },
+    "bundle_diameter": {
+      "minimum": 0.5,
+      "maximum": 2.0,
+      "minimum_inclusive": true,
+      "maximum_inclusive": true,
+      "unit": "mm"
+    },
+    "filament_diameter": {
+      "minimum": 10.0,
+      "maximum": 30.0,
+      "minimum_inclusive": true,
+      "maximum_inclusive": true,
+      "unit": "um"
+    },
+    "fatigue_life": {
+      "minimum": 10000.0,
+      "maximum": null,
+      "minimum_inclusive": false,
+      "maximum_inclusive": true,
+      "unit": "cycles"
+    },
+    "knot_efficiency": {
+      "minimum": 0.6,
+      "maximum": null,
+      "minimum_inclusive": false,
+      "maximum_inclusive": true,
+      "unit": "ratio"
+    },
+    "environmental_temperature_min_c": -20.0,
+    "environmental_temperature_max_c": 80.0,
+    "humid_air_required": true,
+    "reference_service_load_n": 1000.0
+  },
+  "candidates": [
+    {
+      "id": "fiber-2ce891491668e51e",
+      "name": "uhmwpe-gel-draw-100-doe-001",
+      "design_hash": "2ce891491668e51e906e8fee06489144cb9fd6082ec9468d5b9f2f52e6c26d40",
+      "chemistry": {
+        "constituents": [
+          {
+            "name": "linear UHMWPE",
+            "material_family": "uhmwpe",
+            "role": "load_bearing_core",
+            "mass_fraction": 1.0,
+            "representation": "[*]CC[*]",
+            "representation_type": "psmiles",
+            "evidence_basis": "exact repeat chemistry; molecular-weight values are DOE setpoints"
+          }
+        ],
+        "number_average_molecular_weight_g_mol": 1500000.0,
+        "weight_average_molecular_weight_g_mol": 3000000.0,
+        "hard_segment_fraction": null,
+        "soft_segment_fraction": null
+      },
+      "process": {
+        "spinning_method": "gel_spin",
+        "dope_concentration_mass_fraction": 0.05,
+        "solvent_or_buffer": "paraffin oil",
+        "coagulation_or_trigger": "ambient-air quench, n-hexane extraction, vacuum dry",
+        "spinning_temperature_c": 170.0,
+        "draw_ratio": 100.0,
+        "crystallinity_fraction": 0.85,
+        "filament_diameter_um": 20.0,
+        "filament_count": 3200,
+        "twist_turns_per_m": 25.0,
+        "bundle_diameter_mm": 1.3,
+        "core_mass_fraction": 1.0,
+        "sheath_mass_fraction": 0.0,
+        "anneal_temperature_c": 148.0,
+        "anneal_under_tension": true,
+        "unresolved_parameters": []
+      },
+      "generation": 0,
+      "parent_ids": [],
+      "status": "hypothesis",
+      "hypothesis_basis": "First concrete fiber-v1 DOE point. Chemistry and process settings are design inputs, not measured output.",
+      "assumptions": [
+        "The 0.85 crystallinity fraction is a DOE target requiring measurement.",
+        "The 25 turns/m bundle twist is an initial bundle variable, not an optimized value.",
+        "Atomistic cells use finite chains and draw ratios 2/4/6; they cannot reproduce the full 1.5 M g/mol chain or draw 100."
+      ],
+      "source_references": [
+        "https://doi.org/10.1007/BF00955487",
+        "https://doi.org/10.1002/polb.20682",
+        "https://research.rug.nl/en/publications/mechanical-properties-of-ultra-high-molecular-weight-polyethylene"
+      ],
+      "created_at": "2026-08-25T16:59:34.268868Z"
+    },
+    {
+      "id": "fiber-fbb3d2faa4b51543",
+      "name": "ppta-dry-jet-wet-doe-001",
+      "design_hash": "fbb3d2faa4b51543342cf3ace4f6f9d1bf507984e1283c78270016b74c3b44fe",
+      "chemistry": {
+        "constituents": [
+          {
+            "name": "poly(p-phenylene terephthalamide)",
+            "material_family": "aramid",
+            "role": "load_bearing_core",
+            "mass_fraction": 1.0,
+            "representation": "[*]C(=O)c1ccc(cc1)C(=O)Nc1ccc(cc1)N[*]",
+            "representation_type": "psmiles",
+            "evidence_basis": "exact PPTA repeat chemistry; molecular-weight values are DOE setpoints"
+          }
+        ],
+        "number_average_molecular_weight_g_mol": 20000.0,
+        "weight_average_molecular_weight_g_mol": 40000.0,
+        "hard_segment_fraction": null,
+        "soft_segment_fraction": null
+      },
+      "process": {
+        "spinning_method": "dry_jet_wet_spin",
+        "dope_concentration_mass_fraction": 0.15,
+        "solvent_or_buffer": "concentrated sulfuric acid",
+        "coagulation_or_trigger": "6 mm air gap then room-temperature water bath",
+        "spinning_temperature_c": 60.0,
+        "draw_ratio": 3.5,
+        "crystallinity_fraction": 0.75,
+        "filament_diameter_um": 20.0,
+        "filament_count": 3200,
+        "twist_turns_per_m": 25.0,
+        "bundle_diameter_mm": 1.3,
+        "core_mass_fraction": 1.0,
+        "sheath_mass_fraction": 0.0,
+        "anneal_temperature_c": 300.0,
+        "anneal_under_tension": true,
+        "unresolved_parameters": []
+      },
+      "generation": 0,
+      "parent_ids": [],
+      "status": "hypothesis",
+      "hypothesis_basis": "Second concrete fiber-v1 DOE point and rigid-chain comparator; process values are inputs, not measurements.",
+      "assumptions": [
+        "The molecular-weight distribution and 0.75 crystallinity are DOE values requiring measurement.",
+        "Pure PPTA is expected to challenge the density target and is retained as a strength comparator.",
+        "GAFF2 aligned-cell results cannot establish PPTA fracture strength; a validated reactive potential is required later."
+      ],
+      "source_references": [
+        "https://doi.org/10.1016/j.polymer.2006.10.006",
+        "https://doi.org/10.1016/j.polymer.2017.03.012"
+      ],
+      "created_at": "2026-08-25T16:59:34.269038Z"
+    },
+    {
+      "id": "fiber-d32115b96c24656b",
+      "name": "segmented-polyurethane-urea-family",
+      "design_hash": "d32115b96c24656b4f416dbe689347563d28091f4e55e0a804fbf92b0a6f8092",
+      "chemistry": {
+        "constituents": [
+          {
+            "name": "segmented-polyurethane-urea-family",
+            "material_family": "segmented_polyurethane_urea",
+            "role": "load_bearing_core",
+            "mass_fraction": null,
+            "representation": null,
+            "representation_type": "unspecified",
+            "evidence_basis": "material-family seed; exact chemistry unresolved"
+          }
+        ],
+        "number_average_molecular_weight_g_mol": null,
+        "weight_average_molecular_weight_g_mol": null,
+        "hard_segment_fraction": null,
+        "soft_segment_fraction": null
+      },
+      "process": {
+        "spinning_method": "wet_spin",
+        "dope_concentration_mass_fraction": null,
+        "solvent_or_buffer": null,
+        "coagulation_or_trigger": null,
+        "spinning_temperature_c": null,
+        "draw_ratio": null,
+        "crystallinity_fraction": null,
+        "filament_diameter_um": null,
+        "filament_count": null,
+        "twist_turns_per_m": null,
+        "bundle_diameter_mm": null,
+        "core_mass_fraction": null,
+        "sheath_mass_fraction": null,
+        "anneal_temperature_c": null,
+        "anneal_under_tension": null,
+        "unresolved_parameters": [
+          "molecular_weight_distribution",
+          "dope_concentration",
+          "draw_ratio",
+          "crystallinity",
+          "filament_count",
+          "twist",
+          "bundle_diameter",
+          "annealing_conditions"
+        ]
+      },
+      "generation": 0,
+      "parent_ids": [],
+      "status": "hypothesis",
+      "hypothesis_basis": "Candidate family for hard/soft-segment optimization; segment chemistry and ratio unresolved.",
+      "assumptions": [],
+      "source_references": [],
+      "created_at": "2026-08-25T16:59:34.269088Z"
+    },
+    {
+      "id": "fiber-b4caed492d0c77a9",
+      "name": "silk-inspired-multiblock-family",
+      "design_hash": "b4caed492d0c77a9b25c21843a855ed38771e29756348c75080778a0f35eaa92",
+      "chemistry": {
+        "constituents": [
+          {
+            "name": "silk-inspired-multiblock-family",
+            "material_family": "silk_inspired_multiblock",
+            "role": "load_bearing_core",
+            "mass_fraction": null,
+            "representation": null,
+            "representation_type": "unspecified",
+            "evidence_basis": "material-family seed; exact chemistry unresolved"
+          }
+        ],
+        "number_average_molecular_weight_g_mol": null,
+        "weight_average_molecular_weight_g_mol": null,
+        "hard_segment_fraction": null,
+        "soft_segment_fraction": null
+      },
+      "process": {
+        "spinning_method": "wet_spin",
+        "dope_concentration_mass_fraction": null,
+        "solvent_or_buffer": null,
+        "coagulation_or_trigger": null,
+        "spinning_temperature_c": null,
+        "draw_ratio": null,
+        "crystallinity_fraction": null,
+        "filament_diameter_um": null,
+        "filament_count": null,
+        "twist_turns_per_m": null,
+        "bundle_diameter_mm": null,
+        "core_mass_fraction": null,
+        "sheath_mass_fraction": null,
+        "anneal_temperature_c": null,
+        "anneal_under_tension": null,
+        "unresolved_parameters": [
+          "molecular_weight_distribution",
+          "dope_concentration",
+          "draw_ratio",
+          "crystallinity",
+          "filament_count",
+          "twist",
+          "bundle_diameter",
+          "annealing_conditions"
+        ]
+      },
+      "generation": 0,
+      "parent_ids": [],
+      "status": "hypothesis",
+      "hypothesis_basis": "Candidate family for combined crystalline and energy-dissipating blocks; sequence unresolved.",
+      "assumptions": [],
+      "source_references": [],
+      "created_at": "2026-08-25T16:59:34.269130Z"
+    },
+    {
+      "id": "fiber-4217c1eb4d0f2ead",
+      "name": "masp-70-30-prior-hypothesis",
+      "design_hash": "4217c1eb4d0f2eadd615e5a26ce1fa228ddeaecdf80a4d9e1f0418f4d16aa425",
+      "chemistry": {
+        "constituents": [
+          {
+            "name": "MaSp1 candidate protein",
+            "material_family": "recombinant_spidroin",
+            "role": "load_bearing_core",
+            "mass_fraction": 0.7,
+            "representation": null,
+            "representation_type": "unspecified",
+            "evidence_basis": "motif-proxy optimization only; seven repetitive units"
+          },
+          {
+            "name": "MaSp2 candidate protein",
+            "material_family": "recombinant_spidroin",
+            "role": "soft_segment",
+            "mass_fraction": 0.3,
+            "representation": null,
+            "representation_type": "unspecified",
+            "evidence_basis": "motif-proxy optimization only; six repetitive units"
+          }
+        ],
+        "number_average_molecular_weight_g_mol": null,
+        "weight_average_molecular_weight_g_mol": null,
+        "hard_segment_fraction": 0.7,
+        "soft_segment_fraction": 0.3
+      },
+      "process": {
+        "spinning_method": "wet_spin",
+        "dope_concentration_mass_fraction": null,
+        "solvent_or_buffer": null,
+        "coagulation_or_trigger": null,
+        "spinning_temperature_c": null,
+        "draw_ratio": null,
+        "crystallinity_fraction": null,
+        "filament_diameter_um": null,
+        "filament_count": null,
+        "twist_turns_per_m": null,
+        "bundle_diameter_mm": null,
+        "core_mass_fraction": null,
+        "sheath_mass_fraction": null,
+        "anneal_temperature_c": null,
+        "anneal_under_tension": null,
+        "unresolved_parameters": [
+          "protein_molecular_weight_distribution",
+          "protein_concentration",
+          "buffer",
+          "trigger_composition",
+          "pH_and_ionic_strength",
+          "temperature",
+          "viscosity_curve",
+          "core_trigger_flow_ratio",
+          "gelation_time",
+          "draw_ratio",
+          "crystallinity",
+          "filament_geometry",
+          "bundle_construction",
+          "drying_and_annealing"
+        ]
+      },
+      "generation": 0,
+      "parent_ids": [],
+      "status": "hypothesis",
+      "hypothesis_basis": "Preserved from the earlier motif-based search as an explicitly unvalidated hypothesis; its old mean-baseline strength estimate is not evidence.",
+      "assumptions": [],
+      "source_references": [],
+      "created_at": "2026-08-25T16:59:34.269183Z"
+    }
+  ],
+  "evaluation_plan": [
+    {
+      "stage": "thermophysical",
+      "backend": "RadonPy/Psi4/LAMMPS for compatible synthetic chemistries",
+      "properties": [
+        "density",
+        "tg"
+      ],
+      "admission_rule": "Converged MD is screening evidence only; protein systems require a protein-specific backend.",
+      "implemented": true
+    },
+    {
+      "stage": "aligned_chain",
+      "backend": "LAMMPS aligned-chain protocol",
+      "properties": [
+        "axial_modulus",
+        "yield_stress_proxy",
+        "chain_orientation",
+        "chain_slip"
+      ],
+      "admission_rule": "Protocol-validation runs are diagnostic only. Production evidence requires temperature, strain-completion, fit-quality, identity, software-version, and artifact-checksum gates.",
+      "implemented": true
+    },
+    {
+      "stage": "fracture",
+      "backend": "validated reactive-potential fracture protocol",
+      "properties": [
+        "tensile_strength",
+        "strain_at_failure",
+        "toughness"
+      ],
+      "admission_rule": "Require an applicable validated potential, replicated trajectories, and uncertainty.",
+      "implemented": false
+    },
+    {
+      "stage": "bundle",
+      "backend": "mesoscale filament/bundle model",
+      "properties": [
+        "fatigue_life",
+        "knot_efficiency",
+        "filament_diameter",
+        "bundle_diameter"
+      ],
+      "admission_rule": "Require explicit filament count, twist, defects, interfaces, and anchor/knot geometry.",
+      "implemented": false
+    },
+    {
+      "stage": "experimental",
+      "backend": "spinning plus tensile/environmental test program",
+      "properties": [
+        "tensile_strength",
+        "strain_at_failure",
+        "toughness",
+        "density",
+        "fatigue_life",
+        "knot_efficiency",
+        "filament_diameter",
+        "bundle_diameter",
+        "environmental_stability"
+      ],
+      "admission_rule": "Only matching-design experimental evidence can qualify fiber-v1.",
+      "implemented": false
+    }
+  ],
+  "excluded_campaign_ids": [
+    "b6231457-8940-4850-965f-2eacf2988eb7"
+  ],
+  "scientific_status": "Aligned-chain protocol_validation job 9ea2f307-a837-401b-9448-95229d491b3f submitted for uhmwpe-gel-draw-100-doe-001; no candidate is qualified.",
+  "created_at": "2026-08-25T16:59:34.269271Z"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "submitted_on": "2026-09-01",
+  "cluster": "betty.parcc.upenn.edu",
+  "account": "jcombar1-betty-testing",
+  "partition": "genoa-std-mem",
+  "reference_array_job_id": "8053451",
+  "array_indices": [0, 1, 2],
+  "replicate_seeds": [104729, 130363, 155921],
+  "mpi_ranks_per_replicate": 8,
+  "admission_job_id": "8053452",
+  "admission_dependency": "afterany:8053451",
+  "structure_hash": "df5e107401de021f7d66ba59798d1424c41d5271d843ab0a08012e124cfafc26",
+  "protocol_hash": "209edf560e8051ef9facec175313b059943a0478013fd77c667ccd6527a0d0b4",
+  "admissible_as_candidate_measurement": false,
+  "scientific_observations_emitted": false
+}

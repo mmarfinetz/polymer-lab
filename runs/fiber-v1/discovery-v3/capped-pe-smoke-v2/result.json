@@ -1,0 +1,53 @@
+{
+  "admissible_as_candidate_measurement": false,
+  "artifact_checksums": {
+    "00.restart": "bcbe9ac8bb37fa06cfe123d9d6602bb63db10b29a2a9bad4d3cd1429788f4a60",
+    "00_minimize.complete": "0d2205e012527fe0babc26a4aca17a05c0598f42ee1cda4c25779dfe8dec2a8a",
+    "00_minimize.in": "d2f6e6992fda3763ecd89c0d1fcc16da686a06e5c481bdd77053263e7397c8bc",
+    "00_minimize.log": "eb19a5f3302f74214b9602559158e7f6ef7db91a0603f653d0ddcaaccfef6c20",
+    "00_minimize.stdout": "0e5e6493166daef982e9f627388d03004bcc0f7940beacba431188f698d78652",
+    "01.restart": "3b6259516b3da757ab215a40e285f5931110911d8930486907ae50286d7808e7",
+    "01_ramp.complete": "4eaecdd3eae96817b8e769c96913195852432401650ad7e3563ec8994584ff6c",
+    "01_ramp.in": "1864938a54c0b8feda0bd9e4ca9872ad5ca7c9eeed27b7c7c696fa84d1243b63",
+    "01_ramp.log": "24b45205c628755a2bfb0534d23955436ccd597cc99af09e4394c58a7d90c196",
+    "01_ramp.stdout": "1c59e99aa8407db9a2e0cb1e7d44f781d307f6037dcd4c4595976518e6e3e7ac",
+    "02.restart": "2e0fec4f91a423ed006dc88f19533390bbc373248c36eb326a01a2b500ba1532",
+    "02_stability.complete": "cf4ae0dad34456e3a3b75f9f69496b8811763ae6b8c22a80c4571880337fa88e",
+    "02_stability.in": "f64fb127ac2cd52937514063a65a2addf2937a6d0a7e8ce3153649a094e0fc27",
+    "02_stability.log": "3539a19e42b8cdc0d888e33c538ca6679eb84ae2d1d25595b90c57e4f185e12f",
+    "02_stability.stdout": "898dea59d523af41be5ad5fa8bcddbe9d2ccf03bb5d216499bce360ce44a05d3",
+    "03.restart": "48014a02dde14da18fd52f36811719dedee79ba7f94a074a0dc64eb529169a12",
+    "03_pull.complete": "3892c02697c801c29b07ce74b8ece818d7f51df3cb917ec681108a3b3afab24e",
+    "03_pull.in": "266f552a11d733551d959d3a235a8f87d945a10fea08f83f3f25a492a3450e37",
+    "03_pull.log": "d1c8022d006c61ab6f768c086ee226f361fa5b255f7a9635d7a309687851ee01",
+    "03_pull.stdout": "689e5bdb52d2158b3c74c7ac27065251fbe4ac42f7be15c5a4531046706d1f4e",
+    "finite-chain.data": "d167eb05a5df7a955077ca38810cabcf2f62e30c65a6e0f6f6bafeb07d43c52d",
+    "protocol.json": "ecd6b28e7f06bfaeaebddd27f356edef4a4d5d22de4c655f0b70bce9fe6a2f84"
+  },
+  "failed_checks": [],
+  "maximum_end_to_end_strain": 0.002014299,
+  "maximum_reaction_stress_gpa_at_md_rate": 6.2186403,
+  "mean_stability_temperature_k": 297.1569927272727,
+  "passed": true,
+  "pull_sample_count": 101,
+  "scientific_scope": "C32 PE oligomer defect reference under fast pull; not UHMWPE fiber strength",
+  "seed": 104729,
+  "smoke": true,
+  "stability_sample_count": 22,
+  "structure": {
+    "atom_count": 4704,
+    "box_lengths_angstrom": [
+      29.668,
+      29.634,
+      48.8
+    ],
+    "carbons_per_chain": 32,
+    "data_sha256": "d167eb05a5df7a955077ca38810cabcf2f62e30c65a6e0f6f6bafeb07d43c52d",
+    "hydrogens_per_chain": 66,
+    "molecular_weight_g_mol": 450.88,
+    "molecule_count": 48,
+    "scientific_scope": "capped short-chain PE defect reference, not UHMWPE or fiber strength",
+    "structure_hash": "ab3e4e4c95bfdaff0cae799152bf8c787467cfefe7ce7220069b0bb93bc40460"
+  },
+  "version": "capped-pe-chain-end-reference-v2"
+}

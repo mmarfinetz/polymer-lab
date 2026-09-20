@@ -1,0 +1,235 @@
+{
+  "candidate": {
+    "architecture": null,
+    "assumptions": [
+      "The 24.5x specimen from this exact formulation has no measured strength, strain, toughness, or fatigue life.",
+      "The paraffin-oil/170C spinning route and the 1996 zone-draw result come from different studies; this combination must be tested.",
+      "20 um and 1.25 mm are fabrication targets to verify by microscopy.",
+      "The 25 turns/m bundle twist is a starting setpoint; matched bundle testing determines whether it is acceptable.",
+      "No interphase is included until measured slip or bundle efficiency warrants it."
+    ],
+    "chemistry": {
+      "constituents": [
+        {
+          "evidence_basis": "known PE repeat; Mn/Mw are procurement specifications",
+          "mass_fraction": 1.0,
+          "material_family": "uhmwpe",
+          "name": "linear ultra-high-molecular-weight polyethylene",
+          "representation": "[*]CC[*]",
+          "representation_type": "psmiles",
+          "role": "load_bearing_core"
+        }
+      ],
+      "hard_segment_fraction": null,
+      "number_average_molecular_weight_g_mol": 1500000.0,
+      "soft_segment_fraction": null,
+      "weight_average_molecular_weight_g_mol": 3000000.0
+    },
+    "created_at": "2026-09-20T14:47:05.238486Z",
+    "design_hash": "bbd827e465e62664790a5f27bc7a86f81043e646106fdf1f81ae266f2aacaa19",
+    "generation": 2,
+    "hypothesis_basis": "A published 5 wt% gel-spun UHMWPE zone-draw point achieved 2.63 GPa and 12.75% strain at 26.4x. 24.5x is a preregistered experiment for the strength-strain tradeoff.",
+    "id": "fiber-bbd827e465e62664",
+    "name": "uhmwpe-zone-draw-24p5-bundle-doe-001",
+    "parent_ids": [
+      "fiber-9ee296fee9e08765"
+    ],
+    "process": {
+      "anneal_temperature_c": null,
+      "anneal_under_tension": null,
+      "bundle_diameter_mm": 1.25,
+      "coagulation_or_trigger": "room-temperature quench; n-hexane extraction; dry before zone draw",
+      "core_mass_fraction": 1.0,
+      "crystallinity_fraction": null,
+      "dope_concentration_mass_fraction": 0.05,
+      "draw_ratio": 24.5,
+      "filament_count": 3200,
+      "filament_diameter_um": 20.0,
+      "heat_band_speed_mm_min": 1.0,
+      "sheath_mass_fraction": 0.0,
+      "solvent_or_buffer": "paraffin oil",
+      "spinning_method": "gel_spin",
+      "spinning_temperature_c": 170.0,
+      "twist_turns_per_m": 25.0,
+      "unresolved_parameters": [],
+      "zone_draw_stress_mpa": 20.0,
+      "zone_draw_temperature_c": 128.0
+    },
+    "source_references": [
+      "https://pubs.kist.re.kr/handle/201004/144249",
+      "https://citeseerx.ist.psu.edu/document?doi=b78f189de926fd0c87e2d80e19853415bd2342be&repid=rep1&type=pdf"
+    ],
+    "status": "hypothesis"
+  },
+  "candidate_specific_measurements": [],
+  "control_candidates": [
+    {
+      "architecture": null,
+      "assumptions": [
+        "The 25.5x specimen from this exact formulation has no measured strength, strain, toughness, or fatigue life.",
+        "The paraffin-oil/170C spinning route and the 1996 zone-draw result come from different studies; this combination must be tested.",
+        "20 um and 1.25 mm are fabrication targets to verify by microscopy.",
+        "The 25 turns/m bundle twist is a starting setpoint; matched bundle testing determines whether it is acceptable.",
+        "No interphase is included until measured slip or bundle efficiency warrants it."
+      ],
+      "chemistry": {
+        "constituents": [
+          {
+            "evidence_basis": "known PE repeat; Mn/Mw are procurement specifications",
+            "mass_fraction": 1.0,
+            "material_family": "uhmwpe",
+            "name": "linear ultra-high-molecular-weight polyethylene",
+            "representation": "[*]CC[*]",
+            "representation_type": "psmiles",
+            "role": "load_bearing_core"
+          }
+        ],
+        "hard_segment_fraction": null,
+        "number_average_molecular_weight_g_mol": 1500000.0,
+        "soft_segment_fraction": null,
+        "weight_average_molecular_weight_g_mol": 3000000.0
+      },
+      "created_at": "2026-09-20T14:47:05.238895Z",
+      "design_hash": "2e54e2533e066d8a507c57208b42611e99cc9d43cc07b43d25665c44e1805e98",
+      "generation": 2,
+      "hypothesis_basis": "A published 5 wt% gel-spun UHMWPE zone-draw point achieved 2.63 GPa and 12.75% strain at 26.4x. 25.5x is a preregistered experiment for the strength-strain tradeoff.",
+      "id": "fiber-2e54e2533e066d8a",
+      "name": "uhmwpe-zone-draw-25p5-bundle-doe-001",
+      "parent_ids": [
+        "fiber-9ee296fee9e08765"
+      ],
+      "process": {
+        "anneal_temperature_c": null,
+        "anneal_under_tension": null,
+        "bundle_diameter_mm": 1.25,
+        "coagulation_or_trigger": "room-temperature quench; n-hexane extraction; dry before zone draw",
+        "core_mass_fraction": 1.0,
+        "crystallinity_fraction": null,
+        "dope_concentration_mass_fraction": 0.05,
+        "draw_ratio": 25.5,
+        "filament_count": 3200,
+        "filament_diameter_um": 20.0,
+        "heat_band_speed_mm_min": 1.0,
+        "sheath_mass_fraction": 0.0,
+        "solvent_or_buffer": "paraffin oil",
+        "spinning_method": "gel_spin",
+        "spinning_temperature_c": 170.0,
+        "twist_turns_per_m": 25.0,
+        "unresolved_parameters": [],
+        "zone_draw_stress_mpa": 20.0,
+        "zone_draw_temperature_c": 128.0
+      },
+      "source_references": [
+        "https://pubs.kist.re.kr/handle/201004/144249",
+        "https://citeseerx.ist.psu.edu/document?doi=b78f189de926fd0c87e2d80e19853415bd2342be&repid=rep1&type=pdf"
+      ],
+      "status": "hypothesis"
+    },
+    {
+      "architecture": null,
+      "assumptions": [
+        "The 26.4x specimen from this exact formulation has no measured strength, strain, toughness, or fatigue life.",
+        "The paraffin-oil/170C spinning route and the 1996 zone-draw result come from different studies; this combination must be tested.",
+        "20 um and 1.25 mm are fabrication targets to verify by microscopy.",
+        "The 25 turns/m bundle twist is a starting setpoint; matched bundle testing determines whether it is acceptable.",
+        "No interphase is included until measured slip or bundle efficiency warrants it."
+      ],
+      "chemistry": {
+        "constituents": [
+          {
+            "evidence_basis": "known PE repeat; Mn/Mw are procurement specifications",
+            "mass_fraction": 1.0,
+            "material_family": "uhmwpe",
+            "name": "linear ultra-high-molecular-weight polyethylene",
+            "representation": "[*]CC[*]",
+            "representation_type": "psmiles",
+            "role": "load_bearing_core"
+          }
+        ],
+        "hard_segment_fraction": null,
+        "number_average_molecular_weight_g_mol": 1500000.0,
+        "soft_segment_fraction": null,
+        "weight_average_molecular_weight_g_mol": 3000000.0
+      },
+      "created_at": "2026-09-20T14:47:05.238939Z",
+      "design_hash": "3af5cbc6679fe713709b2d2f7ec69cebf781eeb781cae75f88be3cc96abf6f40",
+      "generation": 2,
+      "hypothesis_basis": "A published 5 wt% gel-spun UHMWPE zone-draw point achieved 2.63 GPa and 12.75% strain at 26.4x. 26.4x is a preregistered experiment for the strength-strain tradeoff.",
+      "id": "fiber-3af5cbc6679fe713",
+      "name": "uhmwpe-zone-draw-26p4-bundle-doe-001",
+      "parent_ids": [
+        "fiber-9ee296fee9e08765"
+      ],
+      "process": {
+        "anneal_temperature_c": null,
+        "anneal_under_tension": null,
+        "bundle_diameter_mm": 1.25,
+        "coagulation_or_trigger": "room-temperature quench; n-hexane extraction; dry before zone draw",
+        "core_mass_fraction": 1.0,
+        "crystallinity_fraction": null,
+        "dope_concentration_mass_fraction": 0.05,
+        "draw_ratio": 26.4,
+        "filament_count": 3200,
+        "filament_diameter_um": 20.0,
+        "heat_band_speed_mm_min": 1.0,
+        "sheath_mass_fraction": 0.0,
+        "solvent_or_buffer": "paraffin oil",
+        "spinning_method": "gel_spin",
+        "spinning_temperature_c": 170.0,
+        "twist_turns_per_m": 25.0,
+        "unresolved_parameters": [],
+        "zone_draw_stress_mpa": 20.0,
+        "zone_draw_temperature_c": 128.0
+      },
+      "source_references": [
+        "https://pubs.kist.re.kr/handle/201004/144249",
+        "https://citeseerx.ist.psu.edu/document?doi=b78f189de926fd0c87e2d80e19853415bd2342be&repid=rep1&type=pdf"
+      ],
+      "status": "hypothesis"
+    }
+  ],
+  "geometry": {
+    "filament_area_fraction": 0.8191999999999999,
+    "ideal_filament_strength_needed_for_2_gpa_bundle_gpa": 2.4531435213154427,
+    "interpretation": "Ideal load sharing only; observed bundle strength may be lower.",
+    "outer_helix_path_factor": 1.0048075863308052
+  },
+  "go_no_go": {
+    "bundle_break_strain_fraction_max": 0.4,
+    "bundle_break_strain_fraction_min": 0.15,
+    "bundle_tensile_strength_gpa_min": 2.0,
+    "bundle_toughness_mj_m3_strictly_above": 100,
+    "density_g_cm3_strictly_below": 1.3,
+    "fatigue_cycles_strictly_above": 10000,
+    "knot_efficiency_strictly_above": 0.6
+  },
+  "interphase_rule": "Add a separately specified interphase only after measured bundle load-transfer or slip failure, then assign a new candidate ID.",
+  "minimum_reported_data": [
+    "raw single-filament force-extension curves",
+    "measured filament diameter and density",
+    "raw 3200-filament bundle force-extension curves",
+    "toughness by integrating actual stress-strain curves",
+    "failure strain, knot efficiency, creep, and 10000-cycle fatigue",
+    "-20C, room-temperature humid-air, and 80C testing",
+    "resin molecular-weight distribution and residual-solvent assay"
+  ],
+  "preregistered_draw_ratio_controls": [
+    24.5,
+    25.5,
+    26.4
+  ],
+  "production_qualified": false,
+  "published_near_target_observation": {
+    "drawing_stress_mpa": 20,
+    "heat_band_speed_mm_min": 1,
+    "modulus_gpa": 43.3,
+    "same_as_candidate": false,
+    "source": "https://pubs.kist.re.kr/handle/201004/144249",
+    "strain_at_break_fraction": 0.1275,
+    "strength_gpa": 2.63,
+    "temperature_c": 128,
+    "zone_draw_ratio": 26.4
+  },
+  "readiness": "ready_for_controlled_laboratory_test",
+  "replicates_per_setting": 5
+}

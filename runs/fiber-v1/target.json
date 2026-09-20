@@ -1,0 +1,63 @@
+{
+  "tensile_strength": {
+    "minimum": 2.0,
+    "maximum": null,
+    "minimum_inclusive": true,
+    "maximum_inclusive": true,
+    "unit": "GPa"
+  },
+  "tensile_strength_stretch_goal_gpa": 4.0,
+  "strain_at_failure": {
+    "minimum": 15.0,
+    "maximum": 40.0,
+    "minimum_inclusive": true,
+    "maximum_inclusive": true,
+    "unit": "%"
+  },
+  "toughness": {
+    "minimum": 100.0,
+    "maximum": null,
+    "minimum_inclusive": false,
+    "maximum_inclusive": true,
+    "unit": "MJ/m^3"
+  },
+  "density": {
+    "minimum": null,
+    "maximum": 1.3,
+    "minimum_inclusive": true,
+    "maximum_inclusive": false,
+    "unit": "g/cm^3"
+  },
+  "bundle_diameter": {
+    "minimum": 0.5,
+    "maximum": 2.0,
+    "minimum_inclusive": true,
+    "maximum_inclusive": true,
+    "unit": "mm"
+  },
+  "filament_diameter": {
+    "minimum": 10.0,
+    "maximum": 30.0,
+    "minimum_inclusive": true,
+    "maximum_inclusive": true,
+    "unit": "um"
+  },
+  "fatigue_life": {
+    "minimum": 10000.0,
+    "maximum": null,
+    "minimum_inclusive": false,
+    "maximum_inclusive": true,
+    "unit": "cycles"
+  },
+  "knot_efficiency": {
+    "minimum": 0.6,
+    "maximum": null,
+    "minimum_inclusive": false,
+    "maximum_inclusive": true,
+    "unit": "ratio"
+  },
+  "environmental_temperature_min_c": -20.0,
+  "environmental_temperature_max_c": 80.0,
+  "humid_air_required": true,
+  "reference_service_load_n": 1000.0
+}

@@ -1,0 +1,14 @@
+{
+  "version": "fiber-v1-matching-experiment-v1",
+  "candidate": "uhmwpe-bimodal-draw-bundle-doe-001",
+  "status": "superseded_by_fiber-v1-zone-draw-test-v1",
+  "superseded_by": "configs/fiber-v1-zone-draw-test-v1.json",
+  "predeclared_replicates": 5,
+  "specimen": {"filament_diameter_um": 20, "bundle_diameter_mm": 1.3, "draw_ratio": [10, 100], "twist_turns_per_m": 25},
+  "tests": ["single_filament tensile", "bundle tensile", "strain-to-failure", "toughness", "density", "humidity -20/23/80C", "10000-cycle fatigue", "knot and anchor efficiency", "diameter and defects"],
+  "admission_rule": "every target requires matching-design experimental evidence; simulation and surrogate values are not measurements",
+  "interphase_rule": "add SPU-HA only if predeclared bundle pullout/interfacial-slip gate fails",
+  "measurements": {},
+  "admissible_as_candidate_measurement": false,
+  "scientific_observations_emitted": false
+}

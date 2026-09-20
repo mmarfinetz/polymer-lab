@@ -1,0 +1,7 @@
+{
+  "dependency": "afterany",
+  "gate_slurm_job_id": "7850563",
+  "manifest": "/vast/projects/jcombar1/betty-testing/mitchmar/polymer-lab/runs/fiber-v1/aligned/uhmwpe-gel-draw-100-doe-001/protocol-validation-draw-2/manifest.json",
+  "schema_version": 1,
+  "worker_slurm_job_id": "7847312"
+}

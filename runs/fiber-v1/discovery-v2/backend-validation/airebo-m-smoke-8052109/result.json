@@ -1,0 +1,30 @@
+{
+  "admissible_as_scientific_evidence": false,
+  "checksums": {
+    "data": "a69042d92930445633dba338f54d65e41f68017835a5f750de74da04f5772fd6",
+    "input": "c7d5c082fbec3777722222ce3267287ea34ca2c35e38c76c9fb189fcf108c75d",
+    "lammps_log": "a39bbc463989370e75cbc1affa855e30bf12d803c0ce4a60df240ea8b10d14cb",
+    "lammps_stdout": "4e5248848f3b15ec41d97c5dff70baa09955ade589ba34beeff6f19aa50f0337",
+    "potential": "fd5bda23807ad3e342def4bd2c80049a9f3bf6dde36fcbed0b5c91d2d4fd86b4"
+  },
+  "command": [
+    "/vast/projects/jcombar1/betty-testing/mitchmar/polymer-lab/envs/radonpy-mpi/bin/lmp",
+    "-in",
+    "/vast/projects/jcombar1/betty-testing/mitchmar/polymer-lab/app/scripts/lammps_pe_airebo_m_smoke.in",
+    "-log",
+    "/vast/projects/jcombar1/betty-testing/mitchmar/polymer-lab/runs/fiber-v1/discovery-v2/backend-validation/airebo-m-smoke-8052109/log.lammps",
+    "-var",
+    "data_file",
+    "/vast/projects/jcombar1/betty-testing/mitchmar/polymer-lab/vendor/lammps-reference/9e42b6f0f2c68a092d5847d4127a053dc50e126a/data.airebo",
+    "-var",
+    "potential_file",
+    "/vast/projects/jcombar1/betty-testing/mitchmar/polymer-lab/vendor/lammps-reference/9e42b6f0f2c68a092d5847d4127a053dc50e126a/CH.airebo-m"
+  ],
+  "next_action": "implement and validate a crystalline-PE reference protocol",
+  "passed": true,
+  "pinned_lammps_commit": "9e42b6f0f2c68a092d5847d4127a053dc50e126a",
+  "returncode": 0,
+  "schema_version": 1,
+  "scientific_observations_emitted": false,
+  "test": "lammps-airebo-m-polyethylene-capability"
+}

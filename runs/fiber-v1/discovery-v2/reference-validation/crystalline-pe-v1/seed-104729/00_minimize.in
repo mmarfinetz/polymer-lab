@@ -1,0 +1,17 @@
+clear
+units metal
+atom_style atomic
+boundary p p p
+read_data /vast/projects/jcombar1/betty-testing/mitchmar/polymer-lab/runs/fiber-v1/discovery-v2/reference-validation/crystalline-pe-v1/seed-104729/pe-crystal.data
+newton on
+pair_style airebo/morse 3.0
+pair_coeff * * /vast/projects/jcombar1/betty-testing/mitchmar/polymer-lab/vendor/lammps-reference/9e42b6f0f2c68a092d5847d4127a053dc50e126a/CH.airebo-m C H
+neighbor 2.0 bin
+neigh_modify delay 0 every 1 check yes
+timestep 0.0002
+thermo 100
+thermo_style custom step atoms temp press density lx ly lz pe etotal
+min_style fire
+minimize 1.0e-8 1.0e-10 20000 200000
+write_restart /vast/projects/jcombar1/betty-testing/mitchmar/polymer-lab/runs/fiber-v1/discovery-v2/reference-validation/crystalline-pe-v1/seed-104729/00_minimized.restart
+write_data /vast/projects/jcombar1/betty-testing/mitchmar/polymer-lab/runs/fiber-v1/discovery-v2/reference-validation/crystalline-pe-v1/seed-104729/00_minimized.data

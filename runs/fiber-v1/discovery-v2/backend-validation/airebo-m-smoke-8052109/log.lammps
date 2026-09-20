@@ -1,0 +1,92 @@
+LAMMPS (22 Jul 2025 - Update 5)
+  using 1 OpenMP thread(s) per MPI task
+# AIREBO-M polyethylene capability smoke test.
+# This adapts the pinned official LAMMPS AIREBO demonstration and cannot emit measurements.
+
+units               metal
+atom_style          atomic
+
+read_data           ${data_file}
+read_data           /vast/projects/jcombar1/betty-testing/mitchmar/polymer-lab/vendor/lammps-reference/9e42b6f0f2c68a092d5847d4127a053dc50e126a/data.airebo
+Reading data file ...
+  orthogonal box = (-2.1 -2.1 0) to (2.1 2.1 25.579)
+  1 by 1 by 1 MPI processor grid
+  reading atoms ...
+  60 atoms
+  read_data CPU = 0.008 seconds
+replicate           4 4 1
+Replication is creating a 4x4x1 = 16 times larger system...
+  orthogonal box = (-2.1 -2.1 0) to (14.7 14.7 25.579)
+  1 by 1 by 1 MPI processor grid
+  960 atoms
+  replicate CPU = 0.000 seconds
+
+neighbor            0.5 bin
+neigh_modify        delay 5 every 1
+
+pair_style          airebo/morse 3.0
+pair_coeff          * * ${potential_file} C H
+pair_coeff          * * /vast/projects/jcombar1/betty-testing/mitchmar/polymer-lab/vendor/lammps-reference/9e42b6f0f2c68a092d5847d4127a053dc50e126a/CH.airebo-m C H
+Reading airebo/morse potential file /vast/projects/jcombar1/betty-testing/mitchmar/polymer-lab/vendor/lammps-reference/9e42b6f0f2c68a092d5847d4127a053dc50e126a/CH.airebo-m with DATE: 2016-03-15
+
+velocity            all create 300.0 761341
+fix                  integrator all nve
+timestep             0.0005
+
+thermo              10
+thermo_style        custom step atoms temp pe ke etotal press
+run                 100
+Neighbor list info ...
+  update: every = 1 steps, delay = 5 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 10.7
+  ghost atom cutoff = 10.7
+  binsize = 5.35, bins = 4 4 5
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair airebo/morse, perpetual
+      attributes: full, newton on, ghost
+      pair build: full/bin/ghost
+      stencil: full/ghost/bin/3d
+      bin: standard
+Per MPI rank memory allocation (min/avg/max) = 6.942 | 6.942 | 6.942 Mbytes
+   Step        Atoms         Temp          PotEng         KinEng         TotEng         Press     
+         0         960   300           -4096.583       37.188144     -4059.3948      146.68416    
+        10         960   167.27302     -4080.0425      20.735244     -4059.3073      18713.265    
+        20         960   205.44935     -4084.7747      25.467599     -4059.3071     -20836.938    
+        30         960   140.29622     -4076.6005      17.391187     -4059.2093     -10303.088    
+        40         960   153.44145     -4078.2376      19.020675     -4059.2169     -4645.2637    
+        50         960   132.0215      -4075.599       16.365449     -4059.2336      6840.1761    
+        60         960   183.29085     -4082.0084      22.720821     -4059.2876      21087.874    
+        70         960   187.97548     -4082.6263      23.30153      -4059.3247     -9370.2126    
+        80         960   163.41862     -4079.6013      20.25745      -4059.3438     -1272.6735    
+        90         960   179.64592     -4081.5946      22.268994     -4059.3256     -28547.09     
+       100         960   162.25555     -4079.396       20.113276     -4059.2828      6222.6196    
+Loop time of 1.41636 on 1 procs for 100 steps with 960 atoms
+
+Performance: 3.050 ns/day, 7.869 hours/ns, 70.603 timesteps/s, 67.779 katom-step/s
+100.0% CPU use with 1 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 1.1771     | 1.1771     | 1.1771     |   0.0 | 83.11
+Neigh   | 0.23517    | 0.23517    | 0.23517    |   0.0 | 16.60
+Comm    | 0.0028015  | 0.0028015  | 0.0028015  |   0.0 |  0.20
+Output  | 0.00022009 | 0.00022009 | 0.00022009 |   0.0 |  0.02
+Modify  | 0.00053502 | 0.00053502 | 0.00053502 |   0.0 |  0.04
+Other   |            | 0.0005171  |            |       |  0.04
+
+Nlocal:            960 ave         960 max         960 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Nghost:           8526 ave        8526 max        8526 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+Neighs:              0 ave           0 max           0 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+FullNghs:       653112 ave      653112 max      653112 min
+Histogram: 1 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 653112
+Ave neighs/atom = 680.325
+Neighbor list builds = 6
+Dangerous builds = 0
+Total wall time: 0:00:01

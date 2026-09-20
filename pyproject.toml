@@ -1,0 +1,46 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "polymer-lab"
+version = "0.1.0"
+description = "Closed-loop computational polymer research platform"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+license = { text = "MIT" }
+authors = [{ name = "Polymer Lab Contributors" }]
+dependencies = [
+  "pydantic>=2.10,<3",
+]
+
+[project.optional-dependencies]
+science = [
+  "numpy>=2.0",
+  "rdkit>=2025.3",
+  "scikit-learn>=1.6",
+  "xgboost>=3.0",
+]
+postgres = ["psycopg[binary]>=3.2"]
+s3 = ["boto3>=1.35"]
+agent = ["openai>=2.0"]
+tracking = ["mlflow>=3.0"]
+dev = ["pytest>=8.3", "pytest-cov>=6.0", "ruff>=0.11"]
+
+[project.scripts]
+polymer-lab = "polymer_lab.cli:main"
+polymer-lab-worker = "polymer_lab.worker:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/polymer_lab"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

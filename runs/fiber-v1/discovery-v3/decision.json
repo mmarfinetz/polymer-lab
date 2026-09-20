@@ -1,0 +1,26 @@
+{
+  "campaign": "fiber-v1",
+  "decision_version": "discovery-v3-2026-09-20",
+  "reference_gate": {
+    "report": "reference-validation/crystalline-pe-v2/reference-report.json",
+    "four_replicates_passed": true,
+    "mean_axial_modulus_gpa": 259.645633915747,
+    "scope": "perfect crystalline PE backend only"
+  },
+  "deprioritized_design": {
+    "candidate_id": "fiber-9ee296fee9e08765",
+    "screen": "architecture-screen-v2.json",
+    "reason": "published-constituent scenario gives an optimistic work bound below 100 MJ/m3"
+  },
+  "selected_test_candidate": {
+    "candidate_id": "fiber-bbd827e465e62664",
+    "design_hash": "bbd827e465e62664790a5f27bc7a86f81043e646106fdf1f81ae266f2aacaa19",
+    "design": "zone-draw-test-candidate.json",
+    "test_protocol": "../../../configs/fiber-v1-zone-draw-test-v1.json",
+    "readiness": "controlled laboratory test",
+    "meets_fiber_v1_specification": null,
+    "production_qualified": false
+  },
+  "next_evidence": "Independent spinning batches and matching filament/bundle stress-strain curves at 24.5, 25.5 and 26.4 draw ratios",
+  "interphase_status": "deferred pending measured load-transfer or slip deficit"
+}

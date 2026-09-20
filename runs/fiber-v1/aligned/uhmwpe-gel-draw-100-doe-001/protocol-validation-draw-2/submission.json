@@ -1,0 +1,16 @@
+{
+  "campaign_id": "fiber-v1-60ef13628652c42a",
+  "candidate_id": "fiber-2ce891491668e51e",
+  "candidate_name": "uhmwpe-gel-draw-100-doe-001",
+  "design_hash": "2ce891491668e51e906e8fee06489144cb9fd6082ec9468d5b9f2f52e6c26d40",
+  "draw_ratio": 2.0,
+  "estimated_core_hours_ceiling": 192.0,
+  "job_id": "9ea2f307-a837-401b-9448-95229d491b3f",
+  "manifest": "/vast/projects/jcombar1/betty-testing/mitchmar/polymer-lab/runs/fiber-v1/aligned/uhmwpe-gel-draw-100-doe-001/protocol-validation-draw-2/manifest.json",
+  "manifest_hash": "f89a3bed7695671ef49713457cf8f1d859d9dc385fcd945e05041cf750c7dd31",
+  "profile": "protocol_validation",
+  "protocol_hash": "62cfb167cb03690ee74ac97ff75e183f5a761bcd242cca7735ed189da7f1f4b5",
+  "scientific_status": "diagnostic protocol validation; output cannot be admitted as scientific evidence",
+  "slurm_job_id": "7847312",
+  "submitted": true
+}

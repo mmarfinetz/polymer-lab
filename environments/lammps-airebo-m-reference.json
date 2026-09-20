@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "source_repository": "https://github.com/lammps/lammps",
+  "release": "stable_22Jul2025_update5",
+  "commit": "9e42b6f0f2c68a092d5847d4127a053dc50e126a",
+  "files": {
+    "CH.airebo-m": {
+      "path": "potentials/CH.airebo-m",
+      "sha256": "fd5bda23807ad3e342def4bd2c80049a9f3bf6dde36fcbed0b5c91d2d4fd86b4"
+    },
+    "data.airebo": {
+      "path": "examples/airebo/data.airebo",
+      "sha256": "a69042d92930445633dba338f54d65e41f68017835a5f750de74da04f5772fd6"
+    },
+    "in.airebo": {
+      "path": "examples/airebo/in.airebo",
+      "sha256": "dea69db89352cfbcae661164fde30825d380315f2f6164a561aa9dd9b9fc29ef"
+    }
+  },
+  "scientific_status": "Pinned official LAMMPS demonstration assets; capability testing only, not a validated fiber protocol or measurement."
+}

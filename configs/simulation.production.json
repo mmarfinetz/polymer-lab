@@ -1,0 +1,25 @@
+{
+  "profile": "production",
+  "target_atoms_per_chain": 1000,
+  "chain_count": 10,
+  "initial_density_g_cm3": 0.05,
+  "tacticity": "atactic",
+  "force_field": "GAFF2_mod",
+  "charge_method": "RESP",
+  "temperature_k": 300.0,
+  "pressure_atm": 1.0,
+  "tg_cooling_rate_k_per_ns": 8000.0,
+  "random_seed": 1,
+  "radonpy_version": "1.0b2",
+  "rdkit_version": "environment",
+  "psi4_version": "1.10",
+  "lammps_version": "stable",
+  "extra": {
+    "omp": 1,
+    "mpi": 16,
+    "psi4_omp": 4,
+    "psi4_memory_mb": 8000,
+    "retry_equilibration": 2,
+    "no_trajectory": false
+  }
+}

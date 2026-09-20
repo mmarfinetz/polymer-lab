@@ -1,0 +1,37 @@
+{
+  "atom_count": 3456,
+  "box_lengths_angstrom": [
+    29.668,
+    29.634,
+    30.599999999999998
+  ],
+  "carbon_count": 1152,
+  "carbon_xy": [
+    0.04,
+    0.061
+  ],
+  "coordinate_compilation_doi": "10.1021/acsomega.8b00506",
+  "data_sha256": "7d9c146409b7958ca9acf44ebb8c8cff84866216485fd29282cca609f077ef04",
+  "hydrogen_1_xy": [
+    0.185,
+    0.023
+  ],
+  "hydrogen_2_xy": [
+    0.015,
+    0.278
+  ],
+  "hydrogen_count": 2304,
+  "lattice_a_angstrom": 7.417,
+  "lattice_b_angstrom": 4.939,
+  "lattice_c_angstrom": 2.55,
+  "phase": "orthorhombic",
+  "reference_density_g_cm3": 0.9973931935782541,
+  "replicate_a": 4,
+  "replicate_b": 6,
+  "replicate_c": 12,
+  "source_doi": "10.3390/polym15020465",
+  "space_group": "Pnam",
+  "structure_hash": "df5e107401de021f7d66ba59798d1424c41d5271d843ab0a08012e124cfafc26",
+  "temperature_k": 300.0,
+  "version": "orthorhombic-pe-300k-v1"
+}

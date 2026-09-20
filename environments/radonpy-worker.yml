@@ -1,0 +1,24 @@
+name: polymer-lab-radonpy
+channels:
+  - conda-forge
+dependencies:
+  - python=3.13
+  - pip
+  - rdkit
+  - psi4=1.10
+  - libxc=7.0.0
+  # Pin an MPI build. The unconstrained conda-forge solve selected `nompi`,
+  # causing RadonPy to silently collapse requested MPI jobs to one process.
+  - openmpi
+  - lammps=2025.07.22=*mpi_openmpi*
+  - xgboost
+  - scikit-learn
+  - dftd3-python
+  - resp
+  - mdtraj
+  - psutil
+  - scipy
+  - pandas
+  - matplotlib
+  - pip:
+      - pydantic>=2.10,<3

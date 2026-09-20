@@ -1,0 +1,19 @@
+{
+  "name": "high-tg-low-density",
+  "objectives": [
+    {"property": "tg", "direction": "maximize", "threshold": 180.0, "unit": "degC"},
+    {"property": "density", "direction": "minimize", "threshold": 1.2, "unit": "g/cm^3"}
+  ],
+  "population_size": 100,
+  "offspring_size": 100,
+  "physics_batch_size": 10,
+  "max_generations": 5,
+  "max_candidates": 10000,
+  "max_core_hours": 1000.0,
+  "max_physics_jobs": 50,
+  "uncertainty_weight": 0.25,
+  "diversity_weight": 0.15,
+  "random_seed": 42,
+  "require_physics_approval": true
+}
+

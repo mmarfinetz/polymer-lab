@@ -1,0 +1,160 @@
+[
+  {
+    "candidate_id": "fiber-2ce891491668e51e",
+    "design_hash": "2ce891491668e51e906e8fee06489144cb9fd6082ec9468d5b9f2f52e6c26d40",
+    "simulation_screen_passed": false,
+    "experimentally_qualified": false,
+    "nominal_service_load_capacity_n": null,
+    "service_load_gate_passed": false,
+    "passed_properties": [],
+    "missing_simulation_evidence": [
+      "density",
+      "strain_at_failure",
+      "tensile_strength",
+      "toughness"
+    ],
+    "missing_experimental_evidence": [
+      "bundle_diameter",
+      "density",
+      "environmental_stability",
+      "fatigue_life",
+      "filament_diameter",
+      "knot_efficiency",
+      "strain_at_failure",
+      "tensile_strength",
+      "toughness"
+    ],
+    "failed_targets": {},
+    "warnings": [
+      "service-load capacity cannot be checked until filament count and geometry are measured"
+    ],
+    "evidence_ids": []
+  },
+  {
+    "candidate_id": "fiber-fbb3d2faa4b51543",
+    "design_hash": "fbb3d2faa4b51543342cf3ace4f6f9d1bf507984e1283c78270016b74c3b44fe",
+    "simulation_screen_passed": false,
+    "experimentally_qualified": false,
+    "nominal_service_load_capacity_n": null,
+    "service_load_gate_passed": false,
+    "passed_properties": [],
+    "missing_simulation_evidence": [
+      "density",
+      "strain_at_failure",
+      "tensile_strength",
+      "toughness"
+    ],
+    "missing_experimental_evidence": [
+      "bundle_diameter",
+      "density",
+      "environmental_stability",
+      "fatigue_life",
+      "filament_diameter",
+      "knot_efficiency",
+      "strain_at_failure",
+      "tensile_strength",
+      "toughness"
+    ],
+    "failed_targets": {},
+    "warnings": [
+      "service-load capacity cannot be checked until filament count and geometry are measured"
+    ],
+    "evidence_ids": []
+  },
+  {
+    "candidate_id": "fiber-d32115b96c24656b",
+    "design_hash": "d32115b96c24656b4f416dbe689347563d28091f4e55e0a804fbf92b0a6f8092",
+    "simulation_screen_passed": false,
+    "experimentally_qualified": false,
+    "nominal_service_load_capacity_n": null,
+    "service_load_gate_passed": false,
+    "passed_properties": [],
+    "missing_simulation_evidence": [
+      "density",
+      "strain_at_failure",
+      "tensile_strength",
+      "toughness"
+    ],
+    "missing_experimental_evidence": [
+      "bundle_diameter",
+      "density",
+      "environmental_stability",
+      "fatigue_life",
+      "filament_diameter",
+      "knot_efficiency",
+      "strain_at_failure",
+      "tensile_strength",
+      "toughness"
+    ],
+    "failed_targets": {},
+    "warnings": [
+      "candidate still has unresolved design variables: molecular_weight_distribution, dope_concentration, draw_ratio, crystallinity, filament_count, twist, bundle_diameter, annealing_conditions",
+      "service-load capacity cannot be checked until filament count and geometry are measured"
+    ],
+    "evidence_ids": []
+  },
+  {
+    "candidate_id": "fiber-b4caed492d0c77a9",
+    "design_hash": "b4caed492d0c77a9b25c21843a855ed38771e29756348c75080778a0f35eaa92",
+    "simulation_screen_passed": false,
+    "experimentally_qualified": false,
+    "nominal_service_load_capacity_n": null,
+    "service_load_gate_passed": false,
+    "passed_properties": [],
+    "missing_simulation_evidence": [
+      "density",
+      "strain_at_failure",
+      "tensile_strength",
+      "toughness"
+    ],
+    "missing_experimental_evidence": [
+      "bundle_diameter",
+      "density",
+      "environmental_stability",
+      "fatigue_life",
+      "filament_diameter",
+      "knot_efficiency",
+      "strain_at_failure",
+      "tensile_strength",
+      "toughness"
+    ],
+    "failed_targets": {},
+    "warnings": [
+      "candidate still has unresolved design variables: molecular_weight_distribution, dope_concentration, draw_ratio, crystallinity, filament_count, twist, bundle_diameter, annealing_conditions",
+      "service-load capacity cannot be checked until filament count and geometry are measured"
+    ],
+    "evidence_ids": []
+  },
+  {
+    "candidate_id": "fiber-4217c1eb4d0f2ead",
+    "design_hash": "4217c1eb4d0f2eadd615e5a26ce1fa228ddeaecdf80a4d9e1f0418f4d16aa425",
+    "simulation_screen_passed": false,
+    "experimentally_qualified": false,
+    "nominal_service_load_capacity_n": null,
+    "service_load_gate_passed": false,
+    "passed_properties": [],
+    "missing_simulation_evidence": [
+      "density",
+      "strain_at_failure",
+      "tensile_strength",
+      "toughness"
+    ],
+    "missing_experimental_evidence": [
+      "bundle_diameter",
+      "density",
+      "environmental_stability",
+      "fatigue_life",
+      "filament_diameter",
+      "knot_efficiency",
+      "strain_at_failure",
+      "tensile_strength",
+      "toughness"
+    ],
+    "failed_targets": {},
+    "warnings": [
+      "candidate still has unresolved design variables: protein_molecular_weight_distribution, protein_concentration, buffer, trigger_composition, pH_and_ionic_strength, temperature, viscosity_curve, core_trigger_flow_ratio, gelation_time, draw_ratio, crystallinity, filament_geometry, bundle_construction, drying_and_annealing",
+      "service-load capacity cannot be checked until filament count and geometry are measured"
+    ],
+    "evidence_ids": []
+  }
+]

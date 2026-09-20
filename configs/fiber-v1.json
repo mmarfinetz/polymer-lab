@@ -1,0 +1,17 @@
+{
+  "name": "fiber-v1",
+  "scientific_status": "engineering objectives; no candidate-specific measurements",
+  "targets": {
+    "tensile_strength": {"minimum": 2.0, "stretch_goal": 4.0, "unit": "GPa"},
+    "strain_at_failure": {"minimum": 15.0, "maximum": 40.0, "unit": "%"},
+    "toughness": {"greater_than": 100.0, "unit": "MJ/m^3"},
+    "density": {"less_than": 1.3, "unit": "g/cm^3"},
+    "fiber_bundle_diameter": {"minimum": 0.5, "maximum": 2.0, "unit": "mm"},
+    "individual_filament_diameter": {"minimum": 10.0, "maximum": 30.0, "unit": "um"},
+    "environment": {"temperature_min": -20.0, "temperature_max": 80.0, "unit": "degC", "humid_air": true},
+    "fatigue_life": {"greater_than": 10000, "unit": "cycles"},
+    "knot_efficiency": {"greater_than": 0.6, "unit": "ratio"}
+  },
+  "final_admission": "matching-design experimental evidence required for every engineering target",
+  "surrogate_policy": "predictions may prioritize compute but are never stored or admitted as measurements"
+}
