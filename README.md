@@ -15,6 +15,10 @@ and simulation workers.
 
 ## Fiber V1
 
+The current UHMWPE laboratory-test candidate has a
+[fabrication and validation plan](docs/fiber-v1/fiber-bbd827e465e62664-fabrication-plan.md).
+It is a process hypothesis, not a measured or production-qualified fiber.
+
 Initialize the new design space without claiming any candidate-specific result:
 
 ```bash
